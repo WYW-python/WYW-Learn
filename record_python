@@ -1,14 +1,42 @@
-#库类，记录常用的库
+------------------------------------------
+#库类
+#系统类
+import os
+
+#数据类库
 import numpy as np
-import time
-import cv2
 import math
 
+#图像处理类库
+from PIL import Image,ImageTk
+import cv2
 
+#画图类库
+import matplotlib.pyplot as plt
+import matplotlib
 
+#时间类
+import time
+import datetime
 
+#数据分析类库
+from scipy.fftpack import fft #频谱分析
+import heapq #取list最大值
 --------------------------------------------
+#函数类
 
+#字体类
+font = {'family':'SimHei','size':30}
+matplotlib.rc('font',**font)
+
+plt.rcPrams['font.sans-serif'] = ['SimHei']
+plt.rcPrams['axes.unicode_minus'] = False
+
+
+#计算时间
+start_time = time.time()
+end_time = time.time()
+cost_time = end_time - start_time
 
 
 
