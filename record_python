@@ -62,3 +62,7 @@ plt.plot(x,y)
 plt.xlabel('x')
 plt.ylabel('y')
 plt.savefig('huatu2')
+
+--------------------------------------------
+#内置函数类
+abs(x) #绝对值
