@@ -22,6 +22,10 @@ import datetime
 #数据分析类库
 from scipy.fftpack import fft #频谱分析
 import heapq #取list最大值
+
+#Excel类
+import xlrd
+import xlwt
 --------------------------------------------
 #函数类
 
@@ -38,12 +42,23 @@ start_time = time.time()
 end_time = time.time()
 cost_time = end_time - start_time
 
-
-
-
-
-
-
-
+#路径类
+path1 = r'F:\Python\suogugaocha\nowind.xlsx'
 
 --------------------------------------------
+#Excel操作
+readbook = xlrd.open_workbook(path1) #打开excel
+sheet = readbook.sheet_by_index(0) #打开sheet表
+nrows = sheet.nrows
+ncols = sheet.ncols
+
+data1 = sheet.col_values(1)[2:nrows-1]
+
+---------------------------------------------
+#画图类
+plt.figure(1,figsize = (20,10))
+plt.title('huatu')
+plt.plot(x,y)
+plt.xlabel('x')
+plt.ylabel('y')
+plt.savefig('huatu2')
